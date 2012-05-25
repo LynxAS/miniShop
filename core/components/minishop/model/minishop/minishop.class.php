@@ -410,6 +410,7 @@ class miniShop {
 	 * */
 	function changeCartCount($key, $num = 0) {
 		if (array_key_exists($key, $_SESSION['minishop']['goods'])) {
+			$num = intval($num);
 			if ($num <= 0) {
 				unset($_SESSION['minishop']['goods'][$key]);
 			}
